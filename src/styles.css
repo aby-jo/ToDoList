@@ -1,0 +1,135 @@
+body{
+    background-image: url("./background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+
+    
+}
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding-top: 50px;
+}
+nav button{
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #d35400;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+}
+.textbox{
+    display: flex;
+    flex: auto;
+    align-items: center;
+    height: 500px;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+}
+.para{  
+    margin: 0;
+    margin-top: 100px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 10px;
+    font-size: 40px;
+    width: 700px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    border-width: 5px;
+    border-bottom-width: 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: #F9F6F2;
+    color: #D4AF37;
+}
+.text{
+    color: #333333;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-top:10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    font-size: 25px;
+    font-style: oblique;
+    border-color: #CCCCCC;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-style: solid;
+    background-color: #F9F6F2;
+    border-width: 5px;
+
+}
+.menu{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    font-size: 50px;
+    
+}
+.group{
+    margin-top: 20px;
+    grid-column: 2/3;
+    color: rgb(255, 215, 100);
+    place-self: center;
+    max-width: 950px;
+    background-color: rgba(30, 42, 73, 0.5);
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.head{
+    margin-top: 10px;
+    font-size: 30px;
+    color: rgb(173, 216, 230);
+}
+.desc{
+    font-size: 20px;
+    margin-top: 10px;
+    color: rgb(255, 248, 240);
+    padding-bottom: 20px;
+}
+#content {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#content.hidden {
+    opacity: 0;
+}
+.about{
+    color: white;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+.abouthead{
+    font-family: "Parkinsans", sans-serif;
+    background-color: rgba(0,0,0,0.5);
+    padding:10px;
+    margin-top: 50px;
+    place-self: center;
+    max-width: 950px;
+    grid-column: 2/3;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 30px;
+}
