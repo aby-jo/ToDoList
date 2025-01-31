@@ -1,2 +1,2 @@
-# Restaurant_page
-This is a restaurant page made using javascript only as per the requirements of The Odin Project
+# ToDoList
+This is a ToDoList made using javascript only as per the requirements of The Odin Project
