@@ -5,14 +5,23 @@ import { task_render } from "./task_render";
 import { todo } from "./todoos";
 const render_dialog=(main,identifier)=>{
     const dialog=document.createElement("dialog");
+    dialog.classList.add("dialog")
 
     const titleInput=document.createElement("input");
-    titleInput.placeholder="Your Name";
+    titleInput.placeholder="Title*";
+    titleInput.classList.add("dialogtitle","inputbox")
 
-    const descriptionInput = document.createElement("input");
-    descriptionInput.placeholder = "Description";
+    
+    const descriptionInput = document.createElement("textarea");
+    descriptionInput.placeholder = "Description*";
+    descriptionInput.classList.add("dialogdescription","inputbox")
 
+    const foldercontainer=document.createElement("div")
+    foldercontainer.classList.add("container")
+    foldercontainer.textContent="Project*"
     const folder=document.createElement("select")
+    folder.classList.add("box")
+    foldercontainer.appendChild(folder)
     let folder_options=document.querySelectorAll(".folderoptions")
     folder_options.forEach((fold)=>{
         const option = document.createElement("option");
@@ -21,11 +30,20 @@ const render_dialog=(main,identifier)=>{
         folder.appendChild(option);
         
     })
-
+    const dueDatecontainer=document.createElement("div")
+    dueDatecontainer.classList.add("container")
+    dueDatecontainer.textContent="Duedate*"
     const dueDateInput = document.createElement("input");
+    dueDateInput.classList.add("box")
     dueDateInput.type = "date";
+    dueDatecontainer.appendChild(dueDateInput)
 
+    const prioritycontainer=document.createElement("div")
+    prioritycontainer.classList.add("container")
+    prioritycontainer.textContent="Priority*"
     const priorityInput = document.createElement("select");
+    priorityInput.classList.add("box")
+    prioritycontainer.appendChild(priorityInput)
     const priorities = ["Low", "Medium", "High"];
     priorities.forEach((priority) => {
         const option = document.createElement("option");
@@ -33,6 +51,10 @@ const render_dialog=(main,identifier)=>{
         option.textContent = priority;
         priorityInput.appendChild(option);
     });
+    const buttons=document.createElement("div")
+    buttons.classList.add("buttoncontainer")
+    const cancel_button=document.createElement("button")
+    cancel_button.textContent="Cancel"
     const submit_Button=document.createElement("button"); 
     submit_Button.id="submit";
     submit_Button.textContent="Submit";
@@ -78,14 +100,23 @@ const render_dialog=(main,identifier)=>{
         complete(main,identifier)
         
     })
+    cancel_button.addEventListener("click",()=>{
+        dialog.close()
+        clear_render(main)
+        mainpage(main,identifier)
+        task_render(main,identifier);
+        complete(main,identifier)
+    })
 
     main.appendChild(dialog);
     dialog.appendChild(titleInput);
     dialog.appendChild(descriptionInput);
-    dialog.appendChild(dueDateInput);
-    dialog.appendChild(priorityInput);
-    dialog.appendChild(folder)
-    dialog.appendChild(submit_Button);
+    dialog.appendChild(dueDatecontainer);
+    dialog.appendChild(prioritycontainer);
+    dialog.appendChild(foldercontainer)
+    dialog.appendChild(buttons)
+    buttons.appendChild(cancel_button)
+    buttons.appendChild(submit_Button);
     
 
     

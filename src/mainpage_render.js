@@ -1,3 +1,4 @@
+import newtaskimg from "./img/addcircle_img.svg"
 import { render_dialog } from "./dialog";
 const mainpage=(main,identifier)=>{
     let head;
@@ -17,15 +18,20 @@ const mainpage=(main,identifier)=>{
         head=identifier
     }
     const render=document.createElement("div");
+    render.classList.add("render")
 
     const heading=document.createElement("div");
+    heading.classList.add("heading")
     heading.textContent=head;
-
+    const count=document.createElement("div")
+    count.classList.add("counts")
     const pending_Count=document.createElement("div");
-    pending_Count.id="pendingCount"
+    pending_Count.classList.add("individualcount")
     const pstatus=document.createElement("div");
+    pstatus.classList.add("status")
     const pcount=document.createElement("div");
     pcount.id="pcount"
+    pcount.classList.add("count")
     pstatus.textContent="Pending";
     let temp2;
     let temp_string2=localStorage.getItem("pendingCount")
@@ -40,8 +46,11 @@ const mainpage=(main,identifier)=>{
     }
 
     const completed_Count=document.createElement("div");
+    completed_Count.classList.add("individualcount")
     const cstatus=document.createElement("div");
     const ccount=document.createElement("div");
+    cstatus.classList.add("status")
+    ccount.classList.add("count")
     ccount.id="ccount"
     cstatus.textContent="Completed";
     let temp;
@@ -57,18 +66,27 @@ const mainpage=(main,identifier)=>{
     }
 
     const new_Task=document.createElement("button");
-    new_Task.textContent="New Task";
+    let new_Task_txt=document.createElement("div")
+    new_Task_txt.id="newtasktext"
+    new_Task_txt.textContent="New Task"
+    let new_Task_img=document.createElement("img")
+    new_Task_img.classList.add("newlogo")
+    new_Task_img.src=newtaskimg
+    new_Task.classList.add("newtaskbtn")
+    new_Task.appendChild(new_Task_img)
+    new_Task.appendChild(new_Task_txt)
 
     main.appendChild(render)
     render.appendChild(heading);
+    render.appendChild(count)
+    count.appendChild(pending_Count);
 
-    render.appendChild(pending_Count);
-    pending_Count.appendChild(pstatus);
     pending_Count.appendChild(pcount);
+    pending_Count.appendChild(pstatus);
     
-    render.appendChild(completed_Count);
-    completed_Count.appendChild(cstatus);
+    count.appendChild(completed_Count);
     completed_Count.appendChild(ccount);
+    completed_Count.appendChild(cstatus);
 
     render.appendChild(new_Task);
     

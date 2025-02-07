@@ -7,7 +7,7 @@ import { task_render } from "./task_render"
 let delete_direc=(value)=>{
     let taskcount=localStorage.getItem("taskcount")
     let main=document.querySelector("#main")
-    let identifier="Default"
+    let identifier="Root"
     let task
     let projects=JSON.parse(localStorage.getItem("projects"))
     projects=projects.filter(element => element!==value)

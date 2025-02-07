@@ -1,0 +1,366 @@
+
+body{
+    padding:0;
+    margin: 0;
+    border: 0;
+    height:max-content;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+.side_main_head{
+    padding-top: 0px;
+    background-color: #111111;
+    padding-left: 20px;
+    color: lightgrey;
+    display: grid;
+    min-width: 300px;
+    max-width: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #232323 #111111;
+}
+.sublime{
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+}
+#sublime_logo{
+    width: 30px;
+    height: 30px;
+}
+.tasklogo{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding-left: 5px;
+}
+.sublime_txt{
+    padding-left: 5px;
+    font-size: 30px;
+    display: flex;
+    font-family: "Work Sans",serif;
+}
+.css_tasks{
+    font-family: "Lora",serif;
+    border-radius: 5px;
+    height: 35px;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.css_tasks:hover{
+    cursor: pointer;
+    color:aquamarine;
+    background-color: #232323;
+}
+.task_head{
+    font-size: 25px;
+    font-weight: 999;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+}
+.projects_head{
+    display: flex;
+    flex-direction: column;
+    min-height: 2fr;
+}
+#main{
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #111111 #232323;
+}
+#buttonnewproject{
+    border-style: dotted;
+    border-color: #232323;
+    min-width: 200px;
+    min-height: 40px;
+}
+#directory_input_container{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin: 10px 10px 10px 0px;
+    padding: 5px;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #232323;
+}
+#directory_input_container button{
+    padding-left: 10px;
+    min-width: 120px;
+    min-height: 30px;
+    border-radius: 5px;
+    border-style: none;
+    color: white;
+    background-color: #232323;
+}
+
+#directory_input{
+
+    width: 200px;
+    border-radius: 5px;
+    padding-left: 10px;
+    height: 30px;
+    font-size: 16px;
+    color: white;
+    background-color: #232323;
+    border-style: none;
+    border-bottom-color: slategray;
+    border-bottom: solid;
+    outline: none;
+}
+#deleteproject{
+    color: #111111;
+    background-color: #111111;
+    display: flex;
+    min-width: 50px;
+    min-height: 30px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #232323;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    outline: none;
+}
+.folderoptions {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 150px;
+    display: inline-block; 
+}
+.heading{
+    font-family: "Work Sans",serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 60px;
+}
+.render{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.counts{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+}
+.individualcount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    border-style: dashed;
+    width:160px;
+    height: 130px;
+    border-radius: 7px;
+    border-width: 2px;
+    border-color: #343434;
+}
+.newtaskbtn{
+    align-self: center;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    background-color: #232323;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #343434;
+    border-radius: 5px;
+    padding: 0;
+
+}
+#newtasktext{
+    font-size: 15px;
+    color: lightgray;
+}
+.newlogo{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+#main{
+    background-color: #232323;
+    color: lightgray;
+    padding-top: 50px;
+    min-width: 582px;
+}
+.count{
+    font-size: 60px;
+    font-family: monospace;
+}
+.status{
+    font-size: 24px;
+    font-family: "Lora";
+    text-align: center;
+}
+#alltasks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+.individualtask{
+    display: flex;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 40px;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-style: solid;
+    border-color: #343434;
+    border-radius: 5px;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+.tasktitle{
+    width: 400px;
+    display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.check{
+    align-items: center;
+    background-color: #232323;
+    border-style: none;
+    border-radius: 5px;
+}
+.check:hover{
+    background-color: #343434;
+}
+.checklogo{
+    pointer-events: none;
+}
+.highp{
+    fill: red;
+}
+.mediump{
+    fill:yellow
+}
+.lowp{
+    fill: #48cae4;
+}
+.date{
+    display: flex;
+    gap: 5px;
+}
+.description{
+    padding-top: 20px;
+    width: 600px;
+    padding-left: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    border-top-style: dashed;
+    border-color: #343434;
+    opacity: 0.7;
+}
+.folder{
+    display: flex;
+    min-width: 500px;
+    gap: 5px;
+    align-items: center;
+}
+.dlogo{
+    pointer-events: none;
+}
+.editbutton,.deletebutton{
+    align-items: center;
+    background-color: #232323;
+    border-style: none;
+    border-radius: 5px;
+}
+.editbutton:hover,.deletebutton:hover{
+    background-color: #343434;
+}
+.dialog{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #111111; 
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: fit-content;
+    gap: 30px;
+    color: slategrey;
+    border-style: none;
+    border-radius: 5px;
+}
+.inputbox{
+    background-color: #111111;
+    font-size: medium;
+    color: slategray;
+    outline: none;
+    min-height: 20px;
+}
+.dialogtitle{
+    border-style: none;
+    border-bottom-style: dashed;
+    border-color: #232323;
+}
+.dialogdescription{
+    border-style: solid;
+    border-color: #232323;
+    min-height: 60px;
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    font-size: medium;
+    font-family: inherit;
+    
+}
+.dialogdescription::placeholder{
+    align-self: flex-start;
+    
+}
+.container{
+    display: flex;
+    gap: 10px;
+}
+.box{
+    background-color: #343434;
+    color: slategray;
+    min-width: 120px;
+    min-height: 20px;
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+}
+.buttoncontainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+.buttoncontainer button{
+    background-color: #343434;
+    border-style: none;
+    border-radius: 5px;
+    color: slategray;
+    min-height: 20px;
+}
+.completed{
+    text-decoration: line-through;
+}
